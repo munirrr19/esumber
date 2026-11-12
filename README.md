@@ -1,5 +1,7 @@
 # eSumber
 
+[![Test](https://github.com/munirrr19/esumber/actions/workflows/test.yml/badge.svg)](https://github.com/munirrr19/esumber/actions/workflows/test.yml)
+
 A lightweight room and hall booking system for schools and small organisations. Users pick their name, room, date and time; overlapping bookings are rejected by an atomic check inside a single SQL statement, so double bookings cannot happen even under simultaneous requests.
 
 **Stack:** Cloudflare Workers (API) · Workers Assets (`public/`) · Cloudflare D1 (SQLite) · optional Google Sheets archive via Apps Script.
@@ -62,6 +64,10 @@ To use a custom domain, uncomment `routes` in `wrangler.jsonc` and make sure the
 - `wrangler.jsonc`, `.dev.vars` and secrets are git-ignored. Never commit real keys.
 - Admin actions require the `ADMIN_KEY` secret sent as `x-admin-key`.
 - Keep `database_id`, Sheet IDs and Apps Script URLs out of public commits.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Report security issues as described in [SECURITY.md](SECURITY.md).
 
 ## Licence
 
