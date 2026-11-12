@@ -14,7 +14,7 @@ Terima kasih kerana berminat menambah baik eSumber.
 - Ubahan kecil dan fokus lebih mudah disemak.
 - Tambah ujian dalam `test.js` jika mengubah logik tempahan atau API.
 - Jangan sertakan data sebenar (nama, domain, ID pangkalan data).
-- Antara muka kini dalam Bahasa Melayu. Sumbangan terjemahan amat dialu-alukan.
+- Antara muka dalam Bahasa Melayu. Sumbangan terjemahan ke bahasa lain amat dialu-alukan.
 
 ## Idea yang dialu-alukan
 
