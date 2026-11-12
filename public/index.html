@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eSumber</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div>
+  <img class="logo" src="/logo.png" alt="Logo" width="52" height="80">
+  <div>
+    <h1>eSumber</h1>
+    <p>Tempahan bilik dan dewan</p>
+  </div>
+</div></header>
+
+<main>
+  <section class="card">
+    <h2>Buat Tempahan</h2>
+    <form id="form">
+      <label>Nama guru
+        <select name="nama" required></select>
+      </label>
+      <fieldset>
+        <legend>Pusat / bilik</legend>
+        <div class="chips" id="rooms"></div>
+      </fieldset>
+      <label><span id="tarikh-label">Tarikh</span>
+        <span class="ov"><input type="date" name="date" required><span class="fmt" aria-hidden="true"></span></span>
+      </label>
+      <label class="check"><input type="checkbox" id="multi"><span id="multi-t">+ Tempah beberapa hari</span></label>
+      <label id="end-wrap" hidden>Tarikh akhir
+        <span class="ov"><input type="date" name="dateEnd" disabled><span class="fmt" aria-hidden="true"></span></span>
+      </label>
+      <div id="avail" class="avail" hidden>
+        <span id="avail-t" class="lbl"></span>
+        <div id="avail-bar" class="bar" role="img"></div>
+        <div class="scale" aria-hidden="true"><span>7 AM</span><span>12 PM</span><span>5 PM</span><span>10 PM</span></div>
+        <span id="avail-l" class="hint"></span>
+      </div>
+      <div class="row">
+        <label>Masa mula
+          <span class="ov"><input type="time" name="start" required><span class="fmt" aria-hidden="true"></span></span>
+        </label>
+        <label>Masa tamat
+          <span class="ov"><input type="time" name="end" required><span class="fmt" aria-hidden="true"></span></span>
+        </label>
+      </div>
+      <div class="pills" id="dur" aria-label="Tempoh pantas"><span class="lbl">Tempoh:</span>
+        <button type="button" class="pill" data-h="1">1 jam</button><button type="button" class="pill" data-h="2">2 jam</button><button type="button" class="pill" data-h="4">4 jam</button>
+      </div>
+      <div class="row wide">
+        <label>Tujuan
+          <input name="tujuan" maxlength="200" required>
+        </label>
+        <label>Peserta
+          <input name="peserta" maxlength="200" placeholder="Cth: 30 orang / Tingkatan 5B" required>
+        </label>
+      </div>
+      <p id="amaran" class="alert err" role="alert"></p>
+      <button class="btn" type="submit">Hantar Tempahan</button>
+      <p id="msg" class="alert" role="status"></p>
+      <div id="share" class="share" hidden>
+        <div class="done-h">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 3 3 5-6"/></svg>
+          <div><strong id="done-t">Tempahan berjaya</strong><span id="done-sum"></span></div>
+        </div>
+        <button class="btn" id="share-btn" type="button">Hantar makluman ke WhatsApp</button>
+        <p class="hint" id="share-hint" role="status"></p>
+        <details><summary>Lihat kad</summary><img id="share-img" alt="Pratonton makluman tempahan"></details>
+      </div>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2 id="jadual-tajuk">Tempahan akan datang</h2>
+    <div id="jadual" aria-busy="true"><div class="skel"></div><div class="skel"></div><div class="skel"></div></div>
+    <p class="hint">Untuk membatalkan tempahan, sila hubungi admin.</p>
+  </section>
+</main>
+
+<footer>&copy; 2026 eSumber &middot; <a href="/admin">Admin</a></footer>
+<script src="app.js"></script>
+</body>
+</html>

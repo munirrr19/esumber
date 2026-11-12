@@ -1,0 +1,10 @@
+{
+  // Salin fail ini kepada wrangler.jsonc, kemudian isi database_id dan (pilihan) routes.
+  "name": "esumber",
+  "main": "worker.js",
+  "compatibility_date": "2026-01-01",
+  "assets": { "directory": "./public", "run_worker_first": ["/api/*"] },
+  "d1_databases": [{ "binding": "DB", "database_name": "esumber", "database_id": "GANTI-DENGAN-DATABASE-ID" }],
+  "triggers": { "crons": ["0 20 * * *"] }
+  // "routes": [{ "pattern": "esumber.contoh.com", "custom_domain": true }]
+}

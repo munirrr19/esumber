@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Admin eSumber</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="narrow">
+<header><div>
+  <img class="logo" src="/logo.png" alt="Logo" width="52" height="80">
+  <div>
+    <h1>Admin eSumber</h1>
+    <p>Urus dan batalkan tempahan</p>
+  </div>
+</div></header>
+
+<main class="one">
+  <section class="card" id="login">
+    <h2>Log masuk</h2>
+    <form id="login-form">
+      <label>Kata laluan
+        <input id="key" type="password" autocomplete="current-password" required autofocus>
+      </label>
+      <p id="login-msg" class="alert err" role="alert"></p>
+      <button class="btn" type="submit">Log masuk</button>
+    </form>
+  </section>
+
+  <section class="card" id="panel" hidden>
+    <h2>Tempahan akan datang</h2>
+    <div id="jadual"></div>
+    <p id="msg" class="alert err" role="alert"></p>
+    <p><button class="btn ghost" id="logout" type="button">Log keluar</button></p>
+  </section>
+
+  <section class="card" id="cetak-form" hidden>
+    <h2>Cetak sejarah tempahan</h2>
+    <div class="rng">
+      <label>Dari <input type="date" id="dari"></label>
+      <label>Hingga <input type="date" id="hingga"></label>
+    </div>
+    <p class="hint">Dibuka sebagai halaman cetak. Pilih "Save as PDF" (Simpan sebagai PDF) sebagai pencetak.</p>
+    <button class="btn" id="cetak-btn" type="button">Cetak / simpan PDF</button>
+    <p id="cetak-msg" class="alert err" role="alert"></p>
+  </section>
+
+  <section class="card" id="guru" hidden>
+    <h2>Senarai guru</h2>
+    <form id="guru-form" class="row-add">
+      <input id="guru-nama" maxlength="100" placeholder="Nama guru baharu" aria-label="Nama guru baharu" required>
+      <button class="btn" type="submit">Tambah</button>
+    </form>
+    <p id="guru-msg" class="alert err" role="alert"></p>
+    <ul id="guru-list"></ul>
+  </section>
+</main>
+
+<footer><a href="/">&larr; Kembali ke laman tempahan</a></footer>
+
+<div id="cetak"></div>
+<script src="admin.js"></script>
+</body>
+</html>

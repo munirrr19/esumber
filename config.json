@@ -1,0 +1,11 @@
+{
+  "rooms": [
+    "Dewan Utama",
+    "Bilik Seminar",
+    "Bilik ICT",
+    "Perpustakaan",
+    "Bilik Mesyuarat"
+  ],
+  "maxDaysAhead": 365,
+  "keepDays": 400
+}
